@@ -163,3 +163,7 @@ export var vml = !svg && (function () {
 function userAgentContains(str) {
 	return navigator.userAgent.toLowerCase().indexOf(str) >= 0;
 }
+
+export function mxSet3D(value) {
+	any3d = value;
+}

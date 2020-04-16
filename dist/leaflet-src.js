@@ -1,5 +1,5 @@
 /* @preserve
- * Leaflet 1.6.0, a JS library for interactive maps. http://leafletjs.com
+ * Leaflet 1.6.0+mobilex-master.0c81bdf, a JS library for interactive maps. http://leafletjs.com
  * (c) 2010-2019 Vladimir Agafonkin, (c) 2010-2011 CloudMade
  */
 
@@ -9,7 +9,7 @@
 	(factory((global.L = {})));
 }(this, (function (exports) { 'use strict';
 
-var version = "1.6.0";
+var version = "1.6.0+mobilex-master.0c81bdf9";
 
 /*
  * @namespace Util
@@ -1977,6 +1977,10 @@ function userAgentContains(str) {
 	return navigator.userAgent.toLowerCase().indexOf(str) >= 0;
 }
 
+function mxSet3D(value) {
+	any3d = value;
+}
+
 
 var Browser = (Object.freeze || Object)({
 	ie: ie,
@@ -2009,7 +2013,8 @@ var Browser = (Object.freeze || Object)({
 	passiveEvents: passiveEvents,
 	canvas: canvas,
 	svg: svg,
-	vml: vml
+	vml: vml,
+	mxSet3D: mxSet3D
 });
 
 /*
